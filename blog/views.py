@@ -21,3 +21,23 @@ def token(request):
         return HttpResponse(status=204)
     else:
         return HttpResponseNotAllowed(['GET'])
+
+
+def signin(request):
+    return
+
+
+def signout(request):
+    return
+
+
+def article(request):
+    return
+
+
+def article_id(request):
+    return
+
+
+def comment_id(request):
+    return

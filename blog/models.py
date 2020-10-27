@@ -12,15 +12,22 @@ class Article(models.Model):
         related_name='articles'
     )
 
+    def __str__(self):
+        return self.title
+
 
 class Comment(models.Model):
     article = models.ForeignKey(
         Article,
+        on_delete=models.CASCADE,
         related_name='comments'
     )
     content = models.TextField()
     author = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
-        related_name='articles'
+        related_name='comments'
     )
+
+    def __str__(self):
+        return self.content
