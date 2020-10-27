@@ -1,1 +1,3 @@
 README.pdf
+.idea/
+*/__pycache__/*
