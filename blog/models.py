@@ -12,9 +12,6 @@ class Article(models.Model):
         related_name='articles'
     )
 
-    def __str__(self):
-        return self.title
-
 
 class Comment(models.Model):
     article = models.ForeignKey(
@@ -29,5 +26,3 @@ class Comment(models.Model):
         related_name='comments'
     )
 
-    def __str__(self):
-        return self.content

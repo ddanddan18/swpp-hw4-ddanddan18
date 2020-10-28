@@ -72,7 +72,6 @@ def article(request):
         article.save()
         response_dict = {'id': article.id, 'title': article.title, 'content': article.content,
                          'author_id': article.author.id}
-        # TODO response dict JSON 형식은 정해진거 없나?
 
         return JsonResponse(response_dict, status=201)
     else:
